@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class MovieTheatreServiceTest {
 
-    /*
+
 
     MovieTheatreService mvs;
 
@@ -32,7 +32,7 @@ public class MovieTheatreServiceTest {
         assertEquals(List.of("WestEnd", "Duna Plaza", "Puskin"), new ArrayList<>(mvs.getShows().keySet()));
         assertEquals(List.of("Paw Petrol", "Lord Of The Rings"), mvs.getShows().get("Puskin").stream().map(Movie::getTitle).toList());
     }
-
+/*
     @Test
     void testFindMovie() {
         assertEquals(List.of("WestEnd", "Duna Plaza"), mvs.findMovie("Star Wars"));

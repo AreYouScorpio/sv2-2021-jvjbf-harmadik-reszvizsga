@@ -21,7 +21,7 @@ public class FileReader {
 
 
 
-    public void readFile(Path p) throws IllegalStateException {
+    public Map<String, List<Movie>> readFile(Path p) throws IllegalStateException {
         try {
             List<String> lines = Files.readAllLines(p);
             int counter = 0;
@@ -39,6 +39,7 @@ public class FileReader {
                 IOException ise) {
             throw new IllegalStateException("Can't read file!", ise);
         }
+        return movies;
     }
 
 
