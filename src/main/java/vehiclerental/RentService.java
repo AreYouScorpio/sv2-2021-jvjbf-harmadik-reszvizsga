@@ -1,10 +1,7 @@
 package vehiclerental;
 
 import java.time.LocalTime;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class RentService {
 
@@ -12,6 +9,8 @@ public class RentService {
     Set<User> users = new LinkedHashSet<>();
 
     Set<Rentable> rentables = new TreeSet<>();
+
+    TreeMap<Rentable, User> actualRenting = new TreeMap<>();
 
     public Set<User> getUsers() {
         return users;
@@ -44,6 +43,21 @@ public class RentService {
     }
 
     public  void    rent(User user, Rentable rentable, LocalTime time){
+        if((rentable.getRentingTime()!=null)||(user.getBalance()<rentable.calculateSumPrice(3*60)))
+            throw new IllegalStateException();
+        rentable.rent(time);
+        actualRenting.put(rentable, user);
+    }
+
+    public TreeMap<Rentable, User>  getActualRenting()
+    {
+        return actualRenting;
+    }
+
+    public void closeRent(Rentable rentable, int minutes){
+        actualRenting.get(rentable).setBalance(actualRenting.get(rentable).getBalance()-rentable.calculateSumPrice(minutes));
+        actualRenting.remove(rentable);
+        rentable.closeRent();
 
     }
 

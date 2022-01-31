@@ -73,7 +73,7 @@ public class RentServiceTest {
         System.out.println(rentService.getRentables());
         assertEquals(7, rentService.getRentables().size());
     }
-/*
+
     @Test
     void rentTest() {
         rentService.rent(user1, car, LocalTime.of(13, 12));
@@ -92,11 +92,14 @@ public class RentServiceTest {
         assertThrows(IllegalStateException.class,()->rentService.rent(user2, car, LocalTime.of(13, 16)));
     }
 
+
+
     @Test
     void rentWithLowBalanceTest(){
         user1 = new User("jack", "jack@email.com", 8099);
         assertThrows(IllegalStateException.class,()->rentService.rent(user1, car, LocalTime.of(13, 16)));
     }
+
 
     @Test
     void testActualRentingInOrder(){
@@ -121,6 +124,6 @@ public class RentServiceTest {
     }
 
 
-     */
+
 
 }
