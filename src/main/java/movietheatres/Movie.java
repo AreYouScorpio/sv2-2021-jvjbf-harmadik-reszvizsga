@@ -36,4 +36,8 @@ public class Movie {
     public int hashCode() {
         return Objects.hash(title);
     }
+
+    public LocalTime getStartTime() {
+        return time;
+    }
 }

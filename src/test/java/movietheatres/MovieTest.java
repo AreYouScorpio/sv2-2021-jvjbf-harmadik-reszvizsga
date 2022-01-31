@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class MovieTest {
 
-/*
+
 
 
     @Test
@@ -31,5 +31,5 @@ public class MovieTest {
         assertEquals(movie.hashCode(),other.hashCode());
     }
 
-    */
+
 }
