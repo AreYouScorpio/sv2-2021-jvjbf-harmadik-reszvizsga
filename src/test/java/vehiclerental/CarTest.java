@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class CarTest  {
 
-    /*
+
 
 
     Rentable car;
@@ -58,6 +58,6 @@ public class CarTest  {
     }
 
 
-     */
+
 
 }

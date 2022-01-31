@@ -9,7 +9,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BikeTest {
 
-/*
 
 
     Rentable bike;
@@ -57,5 +56,5 @@ class BikeTest {
     }
 
 
- */
+
 }

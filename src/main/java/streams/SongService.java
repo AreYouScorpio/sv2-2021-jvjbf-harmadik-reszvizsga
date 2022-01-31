@@ -34,12 +34,12 @@ public class SongService {
         return songs.stream().filter(s -> s.getTitle() == title).toList();
     }
 
-    public boolean isPerformerInSong(Song s, String performer){
+    public boolean isPerformerInSong(Song s, String performer) {
         return s.getPerformers().stream().anyMatch(p -> p.equals(performer));
     }
 
     public List<String> titlesBeforeDate(LocalDate date) {
-        return songs.stream().filter(s->s.getRelease().isBefore(date)).map(s->s.getTitle()).toList();
+        return songs.stream().filter(s -> s.getRelease().isBefore(date)).map(s -> s.getTitle()).toList();
     }
 
 }
