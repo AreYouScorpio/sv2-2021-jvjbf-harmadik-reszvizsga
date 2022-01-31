@@ -3,7 +3,7 @@ package movietheatres;
 
 import java.nio.file.Path;
 
-/*
+
 import static movietheatres.FileReader.FILENAME;
 
 public class MovieTheatreService {
@@ -15,4 +15,4 @@ public class MovieTheatreService {
 
     }
    }
- */
+

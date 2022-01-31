@@ -3,12 +3,12 @@ package movietheatres;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.time.LocalTime;
 import java.util.*;
 
 public class FileReader {
 
 
-    /*
     public static final String FILENAME = "src/main/resources/moviesintheaters.txt";
 
 
@@ -19,10 +19,8 @@ public class FileReader {
     }
 
 
-
     // public List<String> players = new ArrayList<>();
     // List<String> answers = new ArrayList<>();
-    public String movie;
 
 
     public void readFile(Path p) throws IllegalStateException {
@@ -30,18 +28,16 @@ public class FileReader {
             List<String> lines = Files.readAllLines(p);
             int counter = 0;
             for (String line : lines) {
-                if (counter == 0) {
-                    movie = line;
-                    System.out.println(movie);
-                    counter = 1;
-                } else {
+                System.out.println(line);
 
-                    String s[] = line.split(";");
-                    if (!movies.containsKey(s[0])) movies.put(s[0], new ArrayList<>());
-                    movies.get(s[0]).add(s[1]);
-                    System.out.println(movies);
+                String s[] = line.split("-");
+                String theaterName = s[0];
+                s = line.split(";");
+                Movie movie = new Movie(s[0], LocalTime.parse(s[1]));
+                if (!movies.containsKey(theaterName)) movies.put(theaterName, new ArrayList<>());
+                movies.get(theaterName).add(movie);
+                System.out.println(movies);
 
-                }
             }
 
         } catch (
@@ -50,7 +46,5 @@ public class FileReader {
         }
     }
 
-
-     */
 
 }
