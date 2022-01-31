@@ -7,6 +7,8 @@ import java.util.*;
 
 public class FileReader {
 
+
+    /*
     public static final String FILENAME = "src/main/resources/moviesintheaters.txt";
 
 
@@ -48,5 +50,7 @@ public class FileReader {
         }
     }
 
+
+     */
 
 }

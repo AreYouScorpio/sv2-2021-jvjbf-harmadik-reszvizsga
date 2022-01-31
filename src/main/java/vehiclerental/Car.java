@@ -9,6 +9,14 @@ public class Car implements Rentable {
     LocalTime rentingTime;
     int price;
 
+    public String getID() {
+        return ID;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
     public Car(String ID, int price) {
         this.ID = ID;
         this.price = price;
@@ -21,7 +29,7 @@ public class Car implements Rentable {
 
     @Override
     public LocalTime getRentingTime() {
-        return LocalTime.now();
+        return rentingTime;
     }
 
     @Override
@@ -32,5 +40,14 @@ public class Car implements Rentable {
     @Override
     public void closeRent() {
         this.rentingTime = null;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "ID='" + ID + '\'' +
+                ", rentingTime=" + rentingTime +
+                ", price=" + price +
+                '}';
     }
 }

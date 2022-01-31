@@ -31,8 +31,14 @@ public class Bike implements Rentable{
 
     @Override
     public void closeRent() {
-
+    this.rentingTime=null;
     }
 
-
+    @Override
+    public String toString() {
+        return "Bike{" +
+                "ID='" + ID + '\'' +
+                ", rentingTime=" + rentingTime +
+                '}';
+    }
 }

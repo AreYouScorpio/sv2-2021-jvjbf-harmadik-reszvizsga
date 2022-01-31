@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class RentServiceTest {
 
-    /*
+
 
     RentService rentService;
     User user1 = new User("jack", "jack@email.com", 10000);
@@ -38,6 +38,8 @@ public class RentServiceTest {
         rentService.addRentable(new Bike("BB123"));
     }
 
+
+
     @Test
     void registerUserTest() {
         rentService.registerUser(new User("jackDoe", "johndoe@email.com", 10000));
@@ -54,6 +56,8 @@ public class RentServiceTest {
         assertEquals("Username is taken!", uniae.getMessage());
     }
 
+
+
     @Test
     void addNewRentable() {
         Rentable car = new Car("Abd-123", 67);
@@ -66,9 +70,10 @@ public class RentServiceTest {
         Rentable car = new Car("Abd-123", 67);
         rentService.addRentable(car);
         rentService.addRentable(car);
+        System.out.println(rentService.getRentables());
         assertEquals(7, rentService.getRentables().size());
     }
-
+/*
     @Test
     void rentTest() {
         rentService.rent(user1, car, LocalTime.of(13, 12));
@@ -78,6 +83,8 @@ public class RentServiceTest {
         assertEquals(LocalTime.of(13,12),car.getRentingTime());
         assertEquals(1, rentService.getActualRenting().keySet().size());
     }
+
+
 
     @Test
     void rentRentableTwiceTest(){
