@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SongServiceTest {
 
-    /*
+
     SongService songService;
 
     @BeforeEach
@@ -44,11 +44,15 @@ class SongServiceTest {
         assertEquals(4, songService.shortestSong().get().getPerformers().size());
     }
 
+
+
+
     @Test
     void findSongByTitleTest(){
         assertEquals(1,songService.findSongByTitle("Battery").size());
         assertEquals("Battery",songService.findSongByTitle("Battery").get(0).getTitle());
     }
+
 
     @Test
     void isPerformerInSongTest(){
@@ -68,8 +72,6 @@ class SongServiceTest {
     }
 
 
-
-     */
 
 
 }

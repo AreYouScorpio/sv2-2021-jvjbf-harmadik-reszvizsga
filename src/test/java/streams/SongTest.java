@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SongTest {
 
-    /*
+
 
     @Test
     void createSong(){
@@ -21,12 +21,16 @@ class SongTest {
 
         assertEquals("Ride the Lightning",song.getTitle());
         assertEquals(397,song.getLength());
+
+
         assertEquals(List.of("James Hetfield","Kirk Hammet", "Cliff Burton","Lars Ulrich"),song.getPerformers());
         assertEquals(LocalDate.of(1984,7,27),song.getRelease());
+
+
 
 
     }
 
 
-     */
+
 }
