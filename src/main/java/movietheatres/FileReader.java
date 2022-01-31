@@ -19,8 +19,6 @@ public class FileReader {
     }
 
 
-    // public List<String> players = new ArrayList<>();
-    // List<String> answers = new ArrayList<>();
 
 
     public void readFile(Path p) throws IllegalStateException {
@@ -28,16 +26,12 @@ public class FileReader {
             List<String> lines = Files.readAllLines(p);
             int counter = 0;
             for (String line : lines) {
-                System.out.println(line);
-
                 String s[] = line.split("-");
                 String theaterName = s[0];
                 s = line.split(";");
                 Movie movie = new Movie(s[0], LocalTime.parse(s[1]));
                 if (!movies.containsKey(theaterName)) movies.put(theaterName, new ArrayList<>());
                 movies.get(theaterName).add(movie);
-                System.out.println(movies);
-
             }
 
         } catch (
