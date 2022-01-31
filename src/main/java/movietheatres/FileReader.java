@@ -32,6 +32,7 @@ public class FileReader {
                 Movie movie = new Movie(s[0], LocalTime.parse(s[1]));
                 if (!movies.containsKey(theaterName)) movies.put(theaterName, new ArrayList<>());
                 movies.get(theaterName).add(movie);
+                movies.get(theaterName).sort(Comparator.comparing(Movie::getTime));
             }
 
         } catch (
