@@ -17,10 +17,11 @@ public class MovieTheatreService {
         movies=fileReader.readFile(p);
     }
 
-    public static void main(String[] args) {
-        FileReader fileReader = new FileReader();
-        fileReader.readFile(Path.of(FILENAME));
+ public Map<String, List<Movie>> getShows(){
+        return movies;
 
-    }
+ }
+
+
    }
 
