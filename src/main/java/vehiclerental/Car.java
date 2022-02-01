@@ -5,9 +5,9 @@ import java.time.LocalTime;
 
 public class Car implements Rentable {
 
-    String ID;
-    LocalTime rentingTime;
-    int price;
+    private String ID;
+    private LocalTime rentingTime;
+    private int price;
 
     public String getID() {
         return ID;
@@ -34,12 +34,12 @@ public class Car implements Rentable {
 
     @Override
     public void rent(LocalTime time) {
-        this.rentingTime = time;
+        rentingTime = time;
     }
 
     @Override
     public void closeRent() {
-        this.rentingTime = null;
+        rentingTime = null;
     }
 
     @Override

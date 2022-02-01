@@ -32,7 +32,7 @@ public class MovieTheatreServiceTest {
         assertEquals(List.of("WestEnd", "Duna Plaza", "Puskin"), new ArrayList<>(mvs.getShows().keySet()));
         assertEquals(List.of("Paw Petrol", "Lord Of The Rings"), mvs.getShows().get("Puskin").stream().map(Movie::getTitle).toList());
     }
-/*
+
     @Test
     void testFindMovie() {
         assertEquals(List.of("WestEnd", "Duna Plaza"), mvs.findMovie("Star Wars"));
@@ -50,6 +50,8 @@ public class MovieTheatreServiceTest {
         assertThrows(IllegalArgumentException.class,()->mvs.findLatestShow("Indiana Jones"));
     }
 
-     */
+
+
+
 
 }

@@ -7,12 +7,12 @@ import java.util.Optional;
 
 public class SongService {
 
-    private List<Song> songs;
+    private List<Song> songs = new ArrayList<>();
 
 
-    public SongService() {
-        this.songs = new ArrayList<>();
-    }
+    // public SongService() {
+    //    this.songs = new ArrayList<>();
+    // }
 
 
     public void addSong(Song s) {
@@ -20,9 +20,9 @@ public class SongService {
     }
 
 
-    public SongService(List<Song> songs) {
-        this.songs = songs;
-    }
+    // public SongService(List<Song> songs) {
+    //    this.songs = songs;
+    // }
 
 
     public Optional<Song> shortestSong() {

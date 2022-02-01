@@ -5,10 +5,10 @@ import java.util.List;
 
 public class Song {
 
-    String title;
-    int length;
-    List<String> artists;
-    LocalDate date;
+    private String title;
+    private int length;
+    private List<String> artists;
+    private LocalDate date;
 
 
     public Song(String title, int length, List<String> artists, LocalDate date) {

@@ -6,8 +6,8 @@ import java.util.Objects;
 
 public class Movie {
 
-    String title;
-    LocalTime time;
+    private String title;
+    private LocalTime time;
 
 
     public Movie(String title, LocalTime time) {
@@ -29,7 +29,9 @@ public class Movie {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Movie movie = (Movie) o;
-        return title.equals(movie.title);
+        //return title.equals(movie.title);
+        return title!=null ? title.equals(movie.title):movie.title==null;
+
     }
 
     @Override

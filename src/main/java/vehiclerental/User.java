@@ -5,9 +5,8 @@ public class User {
     String email;
     int balance;
 
-    public int minusBalance(int sum){
+    public void minusBalance(int sum){
         balance-=sum;
-        return balance;
     }
 
     public User(String username, String email, int balance) {
